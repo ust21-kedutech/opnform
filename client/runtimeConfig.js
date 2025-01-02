@@ -15,15 +15,17 @@ function parseNumber(value, defaultValue = 0) {
 export default {
   // Keys within public, will be also exposed to the client-side
   public: {
-    apiBase: process.env.NUXT_PUBLIC_API_BASE || '',
-    appUrl: process.env.NUXT_PUBLIC_APP_URL || '',
+    // apiBase: process.env.NUXT_PUBLIC_API_BASE || '',
+    // appUrl: process.env.NUXT_PUBLIC_APP_URL || '',
+    apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:8888/api',
+    appUrl: process.env.NUXT_PUBLIC_APP_URL || 'http://localhost:3000',
     env: process.env.NUXT_PUBLIC_ENV || 'local',
     hCaptchaSiteKey: process.env.NUXT_PUBLIC_H_CAPTCHA_SITE_KEY || null,
     recaptchaSiteKey: process.env.NUXT_PUBLIC_RE_CAPTCHA_SITE_KEY || null,
     gtmCode: process.env.NUXT_PUBLIC_GTM_CODE || null,
     amplitudeCode: process.env.NUXT_PUBLIC_AMPLITUDE_CODE || null,
     crispWebsiteId: process.env.NUXT_PUBLIC_CRISP_WEBSITE_ID || null,
-    
+
     featureBaseOrganization: process.env.NUXT_PUBLIC_FEATURE_BASE_ORGANISATION || null,
 
     // Config within public will be also exposed to the client
@@ -36,6 +38,6 @@ export default {
   /**
    * Used to authenticate that the requests are coming from the server - not from a client.
    */
-  apiSecret: process.env.NUXT_API_SECRET || '',
-  privateApiBase: process.env.NUXT_PRIVATE_API_BASE || null,
+  // apiSecret: process.env.NUXT_API_SECRET || '',
+  // privateApiBase: process.env.NUXT_PRIVATE_API_BASE || null,
 }
